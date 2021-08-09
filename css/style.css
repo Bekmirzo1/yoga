@@ -2439,8 +2439,8 @@ body._lock {
     height: 100%;
     top: 0;
     left: -100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 130px 30px 30px 30px;
+    background-color: #e0f3f0;
+    padding: 110px 30px 30px 30px;
     overflow-y: auto;
     -webkit-transition: left 0.3s ease 0s;
     -o-transition: left 0.3s ease 0s;
@@ -2470,10 +2470,20 @@ body._lock {
   }
 
   .menu__item {
-    font-size: 30px;
-    color: #fff;
-    line-height: 150%;
     margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .menu__link {
+    font-size: 30px;
+    color: #1a7f72;
+    font-weight: 500;
+    line-height: 150%;
   }
 
   .icon-menu {
@@ -2489,9 +2499,9 @@ body._lock {
   .icon-menu::before,
   .icon-menu::after,
   .icon-menu span {
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
     position: absolute;
     left: 0px;
     width: 100%;
@@ -2528,21 +2538,18 @@ body._lock {
   .icon-menu._active::before,
   .icon-menu._active::after {
     top: 50%;
-    -webkit-transform: translate(0px, 50%);
-        -ms-transform: translate(0px, 50%);
-            transform: translate(0px, 50%);
   }
 
   .icon-menu._active::before {
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    -webkit-transform: translate(0px, 50%) rotate(135deg);
+        -ms-transform: translate(0px, 50%) rotate(135deg);
+            transform: translate(0px, 50%) rotate(135deg);
   }
 
   .icon-menu._active::after {
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
+    -webkit-transform: translate(0px, 50%) rotate(-135deg);
+        -ms-transform: translate(0px, 50%) rotate(-135deg);
+            transform: translate(0px, 50%) rotate(-135deg);
   }
 
   .fullscreen__container {
