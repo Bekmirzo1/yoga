@@ -62,6 +62,23 @@ if (musicItems.length > 0) {
         }
     }
 }
+
+// header dedisappearance/appearance on scroll
+const header = document.querySelector('.header');
+if (header) {
+    let lastScrollValue = 0;
+    const scrollPosition = () => window.pageYOffset;
+    const defaultOffset = 300;
+    window.addEventListener('scroll', function () {
+        if (scrollPosition() > lastScrollValue && !header.classList.contains('_hide') && scrollPosition() > defaultOffset) {
+            header.classList.add('_hide')
+        } else if (scrollPosition() < lastScrollValue && header.classList.contains('_hide')) {
+            header.classList.remove('_hide')
+        }
+        lastScrollValue = scrollPosition();
+    });
+}
+
 // *Animation on scroll
 const animItems = document.querySelectorAll('._anim-items');
 if (animItems.length > 0) {
