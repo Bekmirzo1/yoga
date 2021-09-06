@@ -388,15 +388,18 @@ body._lock {
   width: 100%;
   -webkit-box-shadow: 0px 25px 40px rgba(26, 127, 114, 0.1);
           box-shadow: 0px 25px 40px rgba(26, 127, 114, 0.1);
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 .header._hide {
   -webkit-transform: translate(0px, -100%);
       -ms-transform: translate(0px, -100%);
           transform: translate(0px, -100%);
+  -webkit-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
 }
 
 .header__body {
@@ -1474,7 +1477,7 @@ body._lock {
   }
 
   .menu__item:not(:last-child) {
-    margin: 0px 2.8571428571em 0px 0px;
+    margin-right: 80px;
   }
 
   .menu__link {
@@ -2451,9 +2454,9 @@ body._lock {
     background-color: #e0f3f0;
     padding: 110px 30px 30px 30px;
     overflow-y: auto;
-    -webkit-transition: left 0.3s ease 0s;
-    -o-transition: left 0.3s ease 0s;
-    transition: left 0.3s ease 0s;
+    -webkit-transition: left 0.4s ease 0s;
+    -o-transition: left 0.4s ease 0s;
+    transition: left 0.4s ease 0s;
   }
 
   .menu__body._active {
@@ -2473,9 +2476,9 @@ body._lock {
     left: -100%;
     background-color: #fff;
     z-index: 2;
-    -webkit-transition: left 0.3s ease 0s;
-    -o-transition: left 0.3s ease 0s;
-    transition: left 0.3s ease 0s;
+    -webkit-transition: left 0.4s ease 0s;
+    -o-transition: left 0.4s ease 0s;
+    transition: left 0.4s ease 0s;
   }
 
   .menu__item {
@@ -2508,9 +2511,9 @@ body._lock {
   .icon-menu::before,
   .icon-menu::after,
   .icon-menu span {
-    -webkit-transition: all 0.5s ease 0s;
-    -o-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
     position: absolute;
     left: 0px;
     width: 100%;
@@ -2680,8 +2683,12 @@ body._lock {
 }
 
 @media (min-width: 767.98px) and (max-width: 1650px) {
+  .menu__item:not(:last-child) {
+    margin-right: calc(5px + 75 * ((100vw - 320px) / 1330));
+  }
+
   .menu__item {
-    font-size: calc(10px + 18 * ((100vw - 320px) / 1330));
+    font-size: calc(14px + 14 * ((100vw - 320px) / 1330));
   }
 
   .columns-practice__column {
@@ -2767,7 +2774,6 @@ body._lock {
 
   .menu__link:hover {
     color: #1a7f72;
-    font-weight: 500;
   }
 
   .menu__link:hover::after {
