@@ -1454,6 +1454,8 @@ body._lock {
 
   .header__body {
     min-height: 130px;
+    overflow: visible;
+    padding-right: 10px;
   }
 
   .menu__body {
